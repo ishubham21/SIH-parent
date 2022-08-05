@@ -5,10 +5,9 @@
   "scripts": {
     "start": "parcel src/index.html",
     "build": "parcel build src/index.html",
-    "format": "prettier --write \"src/**/*.{js,jsx}\"",
+    "format": "prettier --write \"src/**/*.{js,jsx,css}\"",
     "lint": "eslint \"src/**/*.{js,jsx}\" --quiet",
     "lint:fix": "eslint \"src/**/*.{js,jsx}\" --fix"
-  
   },
   "keywords": [],
   "author": "ishubham21",
