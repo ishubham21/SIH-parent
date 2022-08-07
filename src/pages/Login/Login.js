@@ -12,14 +12,14 @@ const Login = () => {
     <>
       <div className={style.login}>
         <div className={style.decor}>
+          <div className={style.name_wrapper}>
+            <p className={style.name}>SOMETHING</p>
+          </div>
           <div className={style.image_wrapper}>
             <img
               src={require("../../assets/Mask_Group_6.png")}
               alt=""
             />
-          </div>
-          <div className={style.name_wrapper}>
-            <p className={style.name}>SOMETHING</p>
           </div>
         </div>
         <div className={style.login_form}>
@@ -49,12 +49,12 @@ const Login = () => {
                   onChange={(e) => setPwd(e.target.value)}
                 />
               </div>
-              <button>LOG IN</button>
+              <button className={style.btn}>LOG IN</button>
             </form>
             <div className={style.alt_options}>
               <div className={style.alt_options_text}>
                 <hr />
-                <p>Or sign in using:</p>
+                <span>Or sign in using:</span>
                 <hr />
               </div>
               <div className={style.alt_icons_wrapper}>

@@ -4,25 +4,72 @@
 }
 
 .login {
-  height: 100vh;
+  height: 280vh;
   overflow: hidden;
   background: linear-gradient(180deg, #5d9cfb 72.14%, #e3e8e9 72.15%);
   display: flex;
-  justify-content: space-evenly;
+  flex-direction: row;
+  justify-content: space-around;
   align-items: center;
+  
 }
 
 .decor {
-  display: flex;
-  justify-content: space-evenly;
+  
+  margin-bottom: 130vh;
+  
 }
 
 .name {
   font-family: "Comic Neue", cursive;
   font-size: 55px;
-  text-align: center;
+  text-align: right;
   color: #ffffff;
   letter-spacing: 14px;
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: #000000;
+  padding-left: 60vh;
+}
+
+.login_form{
+  background-color: beige;
+  padding: 40px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    border: 2px solid wheat;
+    box-shadow:5px 5px 10px rgb(20, 17, 17) ;
+    height: 320px;
+    width: 205px;
+    
+}
+.form_text{
+  padding-bottom: 5vh;
+}
+.input_grp{
+  display: grid;
+  text-align: left;
+  gap: 1vh;
+}
+.btn{
+  margin: 4vh;
+  background-color: rgb(84, 119, 179);
+    border-radius: 10px ;
+    border-color: #5d9cfb;
+    height: 30px;
+    width: 100px;
+    text-align: center;
+    padding: 8px;
+    cursor: pointer;
+}
+.alt_options_text{
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+}
+.alt_icons_wrapper{
+  display: flex;
+  flex-direction: row;
+  margin-top: 5vh;
+  cursor: pointer;
 }
