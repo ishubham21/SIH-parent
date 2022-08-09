@@ -1,0 +1,111 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.dashboard {
+  height: 100vh;
+  overflow: hidden;
+  background: linear-gradient(180deg, #5d9cfb 69.78%, #e3e8e9 69.79%);
+}
+
+.content_wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.left_div {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-left: 150px;
+  margin-bottom: 150px;
+}
+
+.add_btn {
+  border-radius: 50%;
+  background-color: #ffd348;
+  width: 4rem;
+  height: 4rem;
+  text-align: center;
+  box-sizing: border-box;
+  font-size: 60px;
+  font-weight: 600;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.plus {
+  margin-top: -3px;
+}
+
+.add_text {
+  font-family: "Poppins";
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 45px;
+  text-align: center;
+  margin-left: 40px;
+  color: #ffffff;
+}
+
+.saly_img {
+  width: 40rem;
+  height: 38rem;
+}
+
+.right_div {
+  margin-top: 60px;
+}
+
+@media (max-width: 550px){
+.dashboard{
+  background: linear-gradient(180deg, #5D9CFB 85.41%, #E3E8E9 85.42%);
+}
+
+  .content_wrapper{
+    flex-direction: column;
+  }
+  .left_div{
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 0;
+    margin-bottom: 0;
+  }
+
+  .add_btn{
+    width: 3.2rem;
+    height: 3.2rem;
+    font-size: 45px;
+    margin-top: 100px;
+  }
+
+  .plus{
+    margin-top: -1px;
+  }
+
+  .add_text{
+    font-size: 20px;
+    margin-left: 0;
+    margin-top: 25px;
+  }
+
+  .saly_img {
+    width: 22rem;
+    height: 20rem;
+  }
+
+  .right_div{
+    margin-top: 55px;
+  }
+
+  .form_open{
+    position: relative;
+    bottom: 140px;
+  }
+
+  .form_open_div{
+    margin-top: 25px;
+  }
+}
