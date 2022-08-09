@@ -34,6 +34,7 @@ const Login = () => {
               <div className={style.input_grp}>
                 <label>Name</label>
                 <input
+                  className={style.field}
                   type="text"
                   required
                   value={name}
@@ -43,6 +44,7 @@ const Login = () => {
               <div className={style.input_grp}>
                 <label>Password</label>
                 <input
+                  className={style.field}
                   type="text"
                   required
                   value={pwd}

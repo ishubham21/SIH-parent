@@ -11,11 +11,9 @@
   justify-content: space-around;
   align-items: center;
   padding-right: 7vh;
+  height: 140vh;
 }
 
-.decor {
-  margin-bottom: 18vh;
-}
 img {
   height: 100%;
   width: 100%;
@@ -26,54 +24,97 @@ img {
   width: 90vh;
 }
 .name {
-  font-family: "Comic Neue", cursive;
-  font-size: 55px;
-  text-align: right;
-  color: #ffffff;
+  width: 521px;
+  height: 64px;
+
   letter-spacing: 14px;
-  -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: #000000;
-  padding-left: 60vh;
-  padding-top: 5vh;
+  font-family: "Comic Neue";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 55px;
+  line-height: 63px;
+
+  display: flex;
+  align-items: center;
+  text-align: center;
+
+  color: #ffffff;
+  padding-left: 50vh;
 }
 
 .login_form {
-  background-color: beige;
+  background-color: #ffffff;
   padding: 40px;
   display: flex;
   flex-direction: column;
   text-align: center;
-  border: 2px solid wheat;
-  box-shadow: 5px 5px 10px rgb(20, 17, 17);
-  height: 320px;
-  width: 205px;
+  border: 2px solid rgb(251, 250, 249);
+  border-radius: 5px;
+  height: 380px;
+  width: 220px;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
-.form_text {
-  padding-bottom: 5vh;
-}
+
 .heading {
-  font-family: fantasy;
+  width: 274.17px;
+  height: 93.34px;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 45px;
+  line-height: 68px;
+  display: flex;
+  align-items: right;
+  text-align: right;
+  color: #221b0f;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   letter-spacing: 1vh;
-  font-size: xx-large;
-  padding-bottom: 5vh;
 }
+.sub_heading {
+  width: 431px;
+  height: 37px;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 33px;
+  display: flex;
+  color: #000000;
+}
+
 .input_grp {
+  width: 139.96px;
+  height: 41.11px;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 30px;
   display: grid;
+  justify-content: space-between;
+  align-items: center;
   text-align: left;
-  gap: 1vh;
+  color: #000000;
+  padding-bottom: 5vh;
 }
 .btn {
   margin: 4vh;
-  background-color: rgb(230, 174, 31);
+  background-color: #f9b957;
   border-radius: 10px;
-  border-color: #f5f568;
+  border-color: #f9b957;
   height: 30px;
   width: 100px;
   text-align: center;
-  padding: 8px;
   cursor: pointer;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  color: #ffffff;
 }
-.form_div {
-  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman",
-    serif;
+.field {
+  box-sizing: border-box;
+  height: 23px;
+  width: 200px;
+  background: #d2ebf1;
+  border: 1px solid #000000;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 4px;
 }
