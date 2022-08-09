@@ -3,7 +3,7 @@
   padding: 0;
 }
 
-.login {
+.signup {
   overflow: hidden;
   background: linear-gradient(180deg, #5d9cfb 72.14%, #e3e8e9 72.15%);
   display: flex;
@@ -42,7 +42,7 @@ img {
   padding-left: 50vh;
 }
 
-.login_form {
+.signup_form {
   background-color: #ffffff;
   padding: 40px;
   display: flex;
@@ -51,7 +51,7 @@ img {
   border: 2px solid rgb(251, 250, 249);
   border-radius: 5px;
   height: 380px;
-  width: 220px;
+  width: 205px;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
@@ -64,24 +64,12 @@ img {
   font-size: 45px;
   line-height: 68px;
   display: flex;
-  align-items: right;
-  text-align: right;
+  align-items: center;
+  text-align: center;
   color: #221b0f;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   letter-spacing: 1vh;
 }
-.sub_heading {
-  width: 431px;
-  height: 37px;
-  font-family: "Poppins";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 15px;
-  line-height: 33px;
-  display: flex;
-  color: #000000;
-}
-
 .input_grp {
   width: 139.96px;
   height: 41.11px;
@@ -97,18 +85,6 @@ img {
   color: #000000;
   padding-bottom: 5vh;
 }
-.btn {
-  margin: 4vh;
-  background-color: #f9b957;
-  border-radius: 10px;
-  border-color: #f9b957;
-  height: 30px;
-  width: 100px;
-  text-align: center;
-  cursor: pointer;
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-  color: #ffffff;
-}
 .field {
   box-sizing: border-box;
   height: 23px;
@@ -117,4 +93,17 @@ img {
   border: 1px solid #000000;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 4px;
+}
+.btn {
+  margin: 4vh;
+  background-color: #f9b957;
+  border-radius: 10px;
+  border-color: #f9b957;
+  height: 30px;
+  width: 100px;
+  text-align: center;
+
+  cursor: pointer;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  color: #ffffff;
 }
