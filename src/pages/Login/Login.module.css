@@ -4,13 +4,14 @@
 }
 
 .login {
-  /* overflow: hidden; */
+  overflow: hidden;
   background: linear-gradient(180deg, #5d9cfb 72.14%, #e3e8e9 72.15%);
   display: flex;
   justify-content: space-around;
   align-items: center;
   height: 100vh;
   padding-top: 12px;
+  box-sizing: border-box;
 }
 
 .decor {
@@ -30,10 +31,10 @@
   position: absolute;
 }
 
-.img{
+.img {
   width: 45rem;
-height: 32rem;
-margin-right: 30px;
+  height: 32rem;
+  margin-right: 30px;
 }
 
 .login_form {
@@ -65,11 +66,13 @@ margin-right: 30px;
   text-align: center;
 }
 
-.link, .link:visited, .link:active{
-  color: #6462CC;
+.link,
+.link:visited,
+.link:active {
+  color: #6462cc;
 }
 
-.label{
+.label {
   display: block;
   margin-top: 25px;
   margin-bottom: 5px;
@@ -99,37 +102,39 @@ margin-right: 30px;
   border-radius: 0.5em;
   border: none;
   padding: 10px 15px;
+  font-size: 18px;
 }
 
-.field:focus{
+.field:focus {
   outline: none;
 }
 
-@media(min-width: 992px){
-  .name{
+@media (min-width: 992px) {
+  .name {
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: #000000;
   }
 }
 
-@media(max-width: 550px){
-  .login{
+@media (max-width: 550px) {
+  .login {
     flex-direction: column-reverse;
-    background: no-repeat url(../../assets/Mask_Group_6.svg), linear-gradient(180deg, #5D9CFB 85.41%, #E3E8E9 85.42%);
+    background: no-repeat url(../../assets/Mask_Group_6.svg),
+      linear-gradient(180deg, #5d9cfb 85.41%, #e3e8e9 85.42%);
     background-position: -30px bottom;
   }
 
-  .img{
+  .img {
     display: none;
   }
 
-  .name{
+  .name {
     top: 60px;
     right: 15px;
     font-size: 22px;
   }
 
-  .login_form{
+  .login_form {
     width: 17rem;
     height: 20rem;
     margin-top: 20px;
@@ -142,20 +147,21 @@ margin-right: 30px;
     letter-spacing: 4px;
   }
 
-  .sub_heading{
+  .sub_heading {
     font-size: 12px;
   }
 
-  .label{
+  .label {
     font-size: 13px;
   }
 
-  .field{
+  .field {
     border-radius: 10px;
     height: 1.8rem;
+    font-size: 16px;
   }
 
-  .btn{
+  .btn {
     margin-top: 24px;
     padding: 10px 19px;
     font-size: 14px;

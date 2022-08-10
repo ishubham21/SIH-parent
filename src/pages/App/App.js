@@ -6,8 +6,7 @@ import style from "./App.module.css";
 const App = () => {
   return (
     <>
-      <Login />
-      {/* <Signup /> */}
+      <Signup />
     </>
   );
 };

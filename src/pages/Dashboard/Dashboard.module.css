@@ -59,33 +59,37 @@
   margin-top: 60px;
 }
 
-@media (max-width: 550px){
-.dashboard{
-  background: linear-gradient(180deg, #5D9CFB 85.41%, #E3E8E9 85.42%);
-}
+@media (max-width: 550px) {
+  .dashboard {
+    background: linear-gradient(
+      180deg,
+      #5d9cfb 85.41%,
+      #e3e8e9 85.42%
+    );
+  }
 
-  .content_wrapper{
+  .content_wrapper {
     flex-direction: column;
   }
-  .left_div{
+  .left_div {
     flex-direction: column;
     justify-content: center;
     margin-left: 0;
     margin-bottom: 0;
   }
 
-  .add_btn{
+  .add_btn {
     width: 3.2rem;
     height: 3.2rem;
     font-size: 45px;
     margin-top: 100px;
   }
 
-  .plus{
+  .plus {
     margin-top: -1px;
   }
 
-  .add_text{
+  .add_text {
     font-size: 20px;
     margin-left: 0;
     margin-top: 25px;
@@ -96,16 +100,16 @@
     height: 20rem;
   }
 
-  .right_div{
+  .right_div {
     margin-top: 55px;
   }
 
-  .form_open{
+  .form_open {
     position: relative;
     bottom: 140px;
   }
 
-  .form_open_div{
+  .form_open_div {
     margin-top: 25px;
   }
 }
