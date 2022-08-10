@@ -12,41 +12,49 @@ const Login = () => {
     <>
       <div className={style.login}>
         <div className={style.decor}>
+<<<<<<< HEAD
           <div className={style.image_wrapper}>
             <div className={style.name_wrapper}>
               <p className={style.name}>SOMETHING</p>
             </div>
           </div>
+=======
+          <p className={style.name}>SOMETHING</p>
+          <img
+            src={require("../../assets/Kid fly 1.svg")}
+            alt=""
+            className={style.img}
+          />
+>>>>>>> 6e2ae9da362559f5054d39edff5acb5673d8bc5a
         </div>
         <div className={style.login_form}>
           <div className={style.form_text}>
             <p className={style.heading}>LOG IN</p>
             <p className={style.sub_heading}>
-              Don’t have an account? <a href="#">Sign up</a>
+              Don’t have an account?{" "}
+              <a href="#" className={style.link}>
+                Sign up
+              </a>
             </p>
           </div>
           <div className={style.form_div}>
             <form onSubmit={(e) => handleSubmit(e)}>
-              <div className={style.input_grp}>
-                <label>Name</label>
-                <input
-                  className={style.field}
-                  type="text"
-                  required
-                  value={name}
-                  onChange={(e) => setName(e.target.value)}
-                />
-              </div>
-              <div className={style.input_grp}>
-                <label>Password</label>
-                <input
-                  className={style.field}
-                  type="text"
-                  required
-                  value={pwd}
-                  onChange={(e) => setPwd(e.target.value)}
-                />
-              </div>
+              <label className={style.label}>Name</label>
+              <input
+                className={style.field}
+                type="text"
+                required
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+              />
+              <label className={style.label}>Password</label>
+              <input
+                className={style.field}
+                type="text"
+                required
+                value={pwd}
+                onChange={(e) => setPwd(e.target.value)}
+              />
               <button className={style.btn}>LOG IN</button>
             </form>
           </div>

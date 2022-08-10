@@ -6,9 +6,6 @@ import style from "./App.module.css";
 const App = () => {
   return (
     <>
-      <Dashboard />
-      <Login />
-      <Signup />
     </>
   );
 };
