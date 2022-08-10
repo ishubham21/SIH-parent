@@ -7,7 +7,10 @@ const Dashboard = () => {
   const [formIsOpen, setFormIsOpen] = useState(false);
 
   useEffect(() => {
-    document.documentElement.style.setProperty('--navbar-button', '#ffd348')
+    document.documentElement.style.setProperty(
+      "--navbar-button",
+      "#ffd348",
+    );
   }, []);
 
   return (
