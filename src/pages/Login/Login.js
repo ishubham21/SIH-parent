@@ -12,27 +12,23 @@ const Login = () => {
     <>
       <div className={style.login}>
         <div className={style.decor}>
-          <div className={style.name_wrapper}>
-            <p className={style.name}>SOMETHING</p>
-          </div>
-          <div className={style.image_wrapper}>
-            <img
-              src={require("../../assets/Mask_Group_6.png")}
-              alt=""
-            />
-          </div>
+          <p className={style.name}>SOMETHING</p>
+          <img
+            src={require("../../assets/Mask_Group_6.png")}
+            alt=""
+            className={style.img}
+          />
         </div>
         <div className={style.login_form}>
           <div className={style.form_text}>
             <p className={style.heading}>LOG IN</p>
             <p className={style.sub_heading}>
-              Don’t have an account? <a href="#">Sign up</a>
+              Don’t have an account? <a href="#" className={style.link}>Sign up</a>
             </p>
           </div>
           <div className={style.form_div}>
             <form onSubmit={(e) => handleSubmit(e)}>
-              <div className={style.input_grp}>
-                <label>Name</label>
+                <label className={style.label}>Name</label>
                 <input
                   className={style.field}
                   type="text"
@@ -40,9 +36,7 @@ const Login = () => {
                   value={name}
                   onChange={(e) => setName(e.target.value)}
                 />
-              </div>
-              <div className={style.input_grp}>
-                <label>Password</label>
+                <label className={style.label}>Password</label>
                 <input
                   className={style.field}
                   type="text"
@@ -50,7 +44,6 @@ const Login = () => {
                   value={pwd}
                   onChange={(e) => setPwd(e.target.value)}
                 />
-              </div>
               <button className={style.btn}>LOG IN</button>
             </form>
           </div>
