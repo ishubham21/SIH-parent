@@ -1,0 +1,10 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.progress{
+    background: linear-gradient(180deg, #F9B957 55.73%, #FFFFFF 55.74%);
+    height: 100vh;
+    overflow: none;
+}

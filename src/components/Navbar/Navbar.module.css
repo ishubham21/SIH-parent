@@ -37,7 +37,8 @@
 
 .item_button:active,
 .item_button:focus {
-  background-color: #ffd348;
+  /* background-color: #ffd348; */
+  background-color: var(--navbar-button);
   color: #ffffff;
 }
 

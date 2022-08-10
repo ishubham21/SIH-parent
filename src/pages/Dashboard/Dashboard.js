@@ -1,10 +1,15 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import AddChildForm from "../../components/AddChildForm/AddChildForm";
 import Navbar from "../../components/Navbar/Navbar";
 import style from "./Dashboard.module.css";
 
 const Dashboard = () => {
   const [formIsOpen, setFormIsOpen] = useState(false);
+
+  useEffect(() => {
+    document.documentElement.style.setProperty('--navbar-button', '#ffd348')
+  }, []);
+
   return (
     <div className={style.dashboard}>
       <Navbar />

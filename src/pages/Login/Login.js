@@ -12,20 +12,12 @@ const Login = () => {
     <>
       <div className={style.login}>
         <div className={style.decor}>
-<<<<<<< HEAD
-          <div className={style.image_wrapper}>
-            <div className={style.name_wrapper}>
-              <p className={style.name}>SOMETHING</p>
-            </div>
-          </div>
-=======
           <p className={style.name}>SOMETHING</p>
           <img
             src={require("../../assets/Kid fly 1.svg")}
             alt=""
             className={style.img}
           />
->>>>>>> 6e2ae9da362559f5054d39edff5acb5673d8bc5a
         </div>
         <div className={style.login_form}>
           <div className={style.form_text}>
