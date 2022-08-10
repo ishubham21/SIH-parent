@@ -91,19 +91,20 @@ button {
     height: 0.2rem;
   }
 
-  .catagory, label{
+  .catagory,
+  label {
     font-size: 14px;
   }
 
-  .catagory{
+  .catagory {
     margin-top: 19px;
   }
 
-  .radio_btn{
+  .radio_btn {
     margin: 0 13px;
   }
 
-  button{
+  button {
     margin-top: 30px;
     padding: 10px 26px;
   }

@@ -11,17 +11,17 @@
   justify-content: space-around;
   align-items: center;
   padding-right: 7vh;
-  height: 140vh;
+  height: 136vh;
 }
 
-img {
-  height: 100%;
-  width: 100%;
-  object-fit: contain;
-}
 .image_wrapper {
-  height: 90vh;
-  width: 90vh;
+  background-image: url("/src/assets/Mask_Group_6.png");
+  height: 102.5vh;
+  width: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
 }
 .name {
   width: 521px;
@@ -44,20 +44,22 @@ img {
 
 .signup_form {
   background-color: #ffffff;
-  padding: 40px;
+  padding: 35px;
+  margin-left: 20vh;
+  margin-bottom: 10vh;
   display: flex;
   flex-direction: column;
   text-align: center;
   border: 2px solid rgb(251, 250, 249);
   border-radius: 5px;
-  height: 380px;
-  width: 205px;
+  height: 400px;
+  width: 240px;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
 .heading {
   width: 274.17px;
-  height: 93.34px;
+  height: 70px;
   font-family: "Poppins";
   font-style: normal;
   font-weight: 800;
@@ -83,7 +85,7 @@ img {
   align-items: center;
   text-align: left;
   color: #000000;
-  padding-bottom: 5vh;
+  padding-top: 5vh;
 }
 .field {
   box-sizing: border-box;
@@ -95,15 +97,15 @@ img {
   border-radius: 4px;
 }
 .btn {
-  margin: 4vh;
   background-color: #f9b957;
   border-radius: 10px;
   border-color: #f9b957;
-  height: 30px;
-  width: 100px;
+  /* height: 30px;
+  width: 120px;
   text-align: center;
-
+  align-self: center; */
   cursor: pointer;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
   color: #ffffff;
+  margin-bottom: 5vh;
 }

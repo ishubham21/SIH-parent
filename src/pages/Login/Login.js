@@ -12,14 +12,10 @@ const Login = () => {
     <>
       <div className={style.login}>
         <div className={style.decor}>
-          <div className={style.name_wrapper}>
-            <p className={style.name}>SOMETHING</p>
-          </div>
           <div className={style.image_wrapper}>
-            <img
-              src={require("../../assets/Mask_Group_6.png")}
-              alt=""
-            />
+            <div className={style.name_wrapper}>
+              <p className={style.name}>SOMETHING</p>
+            </div>
           </div>
         </div>
         <div className={style.login_form}>

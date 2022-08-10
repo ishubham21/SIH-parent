@@ -9,7 +9,7 @@
   align-items: center;
   padding: 1.5em 4.5em;
   flex-wrap: nowrap;
-  color: #655C5C;
+  color: #655c5c;
 }
 
 .menu {
@@ -35,23 +35,23 @@
   border-radius: 10px;
 }
 
-.item_button:active, .item_button:focus{
-    background-color: #FFD348;
-    color: #FFFFFF;
+.item_button:active,
+.item_button:focus {
+  background-color: #ffd348;
+  color: #ffffff;
 }
 
-@media (max-width: 560px){
-  .navbar{
+@media (max-width: 560px) {
+  .navbar {
     justify-content: space-evenly;
   }
 
-  .item_button{
+  .item_button {
     font-size: 16px;
     padding: 0.1em 0.8em;
   }
 
-  .item{
+  .item {
     padding-right: 3em;
   }
 }
-
