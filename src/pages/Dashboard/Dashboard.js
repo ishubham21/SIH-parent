@@ -104,15 +104,14 @@ const Dashboard = () => {
         )}
       </div>
       {!isEmpty && (
-          <div className={style.footer}>
-            <div className={style.add_btn_dark}>
-              <p className={style.plus_dark}>+</p>
-            </div>
+        <div className={style.footer}>
+          <div className={style.add_btn_dark}>
+            <p className={style.plus_dark}>+</p>
           </div>
-        )}
+        </div>
+      )}
     </div>
   );
 };
 
 export default Dashboard;
-

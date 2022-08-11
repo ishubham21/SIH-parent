@@ -1,6 +1,6 @@
 import styles from "./ChildInfoDiv.module.css";
 
-const ChildInfoDiv = ({color, gender, name}) => {
+const ChildInfoDiv = ({ color, gender, name }) => {
   return (
     <div className={styles.child_info_div} style={color}>
       <p className={styles.name}>{name}</p>
@@ -15,8 +15,20 @@ const ChildInfoDiv = ({color, gender, name}) => {
         </div>
       </div>
       <button className={styles.btn}>Tasks and Progress</button>
-      {gender==="Male" && <img src={require("../../assets/_0004.svg")} alt="" className={styles.img}/>}
-      {gender==="Female" && <img src={require("../../assets/img_0011.svg")} alt="" className={styles.img2}/>}
+      {gender === "Male" && (
+        <img
+          src={require("../../assets/_0004.svg")}
+          alt=""
+          className={styles.img}
+        />
+      )}
+      {gender === "Female" && (
+        <img
+          src={require("../../assets/img_0011.svg")}
+          alt=""
+          className={styles.img2}
+        />
+      )}
     </div>
   );
 };
