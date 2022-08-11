@@ -53,7 +53,7 @@ const AddChildForm = ({ setFormIsOpen }) => {
           className={style.radio_btn}
           required
         />
-        <button>Save</button>
+        <button className={style.btn}>Save</button>
       </form>
     </div>
   );

@@ -1,3 +1,13 @@
 :root {
   --navbar-button: #ffd348;
+  --dashboard-bg: linear-gradient(
+    180deg,
+    #5d9cfb 69.78%,
+    #e3e8e9 69.79%
+  );
+  --dashboard-bg-mobile: linear-gradient(
+    180deg,
+    #5d9cfb 85.41%,
+    #e3e8e9 85.42%
+  );
 }
