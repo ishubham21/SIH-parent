@@ -6,7 +6,7 @@ import style from "./Dashboard.module.css";
 
 const Dashboard = () => {
   const [formIsOpen, setFormIsOpen] = useState(false);
-  const [isEmpty, setIsEmpty] = useState(true);
+  const [isEmpty, setIsEmpty] = useState(false);
 
   useEffect(() => {
     document.documentElement.style.setProperty(
