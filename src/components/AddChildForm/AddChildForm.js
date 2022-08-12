@@ -1,12 +1,13 @@
 import style from "./AddChildForm.module.css";
 
-const AddChildForm = ({ setFormIsOpen }) => {
+const AddChildForm = ({ setFormIsOpen, show, setShow }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     setFormIsOpen(false);
   };
   return (
     <div className={style.add_child_form}>
+      {show && <div className={style.close_btn}><img className={style.img} src={require("../../assets/x (1).svg")} alt="" onClick={()=>setShow(false)}/></div>}
       <p className={style.heading}>CHILD DETAILS</p>
       <form onSubmit={(e) => handleSubmit(e)}>
         <label className={style.name}>Name:</label>

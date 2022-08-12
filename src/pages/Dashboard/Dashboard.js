@@ -1,12 +1,14 @@
 import { useState, useEffect } from "react";
 import AddChildForm from "../../components/AddChildForm/AddChildForm";
 import ChildInfoDiv from "../../components/ChildInfoDiv/ChildInfoDiv";
+import Modal from "../../components/Modal/Modal";
 import Navbar from "../../components/Navbar/Navbar";
 import style from "./Dashboard.module.css";
 
 const Dashboard = () => {
   const [formIsOpen, setFormIsOpen] = useState(false);
   const [isEmpty, setIsEmpty] = useState(false);
+  const[show, setShow] = useState(false);
 
   useEffect(() => {
     document.documentElement.style.setProperty(
@@ -105,11 +107,12 @@ const Dashboard = () => {
       </div>
       {!isEmpty && (
         <div className={style.footer}>
-          <div className={style.add_btn_dark}>
+          <div className={style.add_btn_dark} onClick={()=>setShow(true)}>
             <p className={style.plus_dark}>+</p>
           </div>
         </div>
       )}
+      {show && <Modal show={show} setShow={setShow} />}
     </div>
   );
 };
