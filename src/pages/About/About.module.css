@@ -1,0 +1,36 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.txt {
+  padding-left: 20vh;
+  padding-top: 20vh;
+  width: 750px;
+  height: 300px;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 45px;
+  align-items: center;
+  color: #000000;
+}
+.heading {
+  color: #c66d32;
+  padding-bottom: 10vh;
+}
+
+.img_wrap {
+  display: inline-block;
+  position: relative;
+}
+.img_wrap::after {
+  content: "";
+  position: absolute;
+  left: 2%;
+  bottom: 8px;
+  width: 95%;
+  height: 37vh;
+  background: #f9b957;
+  z-index: -1;
+}
