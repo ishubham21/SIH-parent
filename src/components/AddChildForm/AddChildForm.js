@@ -4,10 +4,23 @@ const AddChildForm = ({ setFormIsOpen, show, setShow }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     setFormIsOpen(false);
+    setShow(false);
   };
   return (
     <div className={style.add_child_form}>
-      {show && <div className={style.close_btn}><img className={style.img} src={require("../../assets/x (1).svg")} alt="" onClick={()=>setShow(false)}/></div>}
+      {
+        <div className={style.close_btn}>
+          <img
+            className={style.img}
+            src={require("../../assets/x (1).svg")}
+            alt=""
+            onClick={() => {
+              setShow(false);
+              setFormIsOpen(false);
+            }}
+          />
+        </div>
+      }
       <p className={style.heading}>CHILD DETAILS</p>
       <form onSubmit={(e) => handleSubmit(e)}>
         <label className={style.name}>Name:</label>

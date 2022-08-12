@@ -8,7 +8,7 @@ import style from "./Dashboard.module.css";
 const Dashboard = () => {
   const [formIsOpen, setFormIsOpen] = useState(false);
   const [isEmpty, setIsEmpty] = useState(false);
-  const[show, setShow] = useState(false);
+  const [show, setShow] = useState(false);
 
   useEffect(() => {
     document.documentElement.style.setProperty(
@@ -61,7 +61,7 @@ const Dashboard = () => {
               </p>
             )}
             {formIsOpen && (
-              <AddChildForm setFormIsOpen={setFormIsOpen} />
+              <AddChildForm setFormIsOpen={setFormIsOpen} setShow={setShow} />
             )}
           </div>
         )}
@@ -107,12 +107,15 @@ const Dashboard = () => {
       </div>
       {!isEmpty && (
         <div className={style.footer}>
-          <div className={style.add_btn_dark} onClick={()=>setShow(true)}>
+          <div
+            className={style.add_btn_dark}
+            onClick={() => setShow(true)}
+          >
             <p className={style.plus_dark}>+</p>
           </div>
         </div>
       )}
-      {show && <Modal show={show} setShow={setShow} />}
+      {show && <Modal show={show} setShow={setShow} setFormIsOpen={setFormIsOpen} />}
     </div>
   );
 };

@@ -6,8 +6,6 @@
 .dashboard {
   height: 100vh;
   overflow: hidden;
-  /* overflow: auto; */
-  /* background: linear-gradient(180deg, #5d9cfb 69.78%, #e3e8e9 69.79%); */
   background: var(--dashboard-bg);
 }
 
