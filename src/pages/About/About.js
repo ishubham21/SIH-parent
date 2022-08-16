@@ -30,7 +30,7 @@ const About = () => {
         <div className={style.img_container}>
           <div className={style.img_wrap}>
           <img
-            src={require("../../assets/Saly-17.png")}
+            src={require("../../assets/Saly-17.svg")}
             alt=" "
             className={style.img}
           />
