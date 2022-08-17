@@ -8,17 +8,16 @@
   background: linear-gradient(180deg, #ffffff 78.65%, #f9b957 78.66%);
 }
 .txt {
-  padding: 3vh 20vh;
-  width: 600px;
+  padding-left: 20vh;
+  width: 640px;
   font-family: "Poppins";
   font-weight: 500;
   font-size: 20px;
   align-items: center;
   color: #000000;
-  margin-top: 30px;
 }
 .heading {
-  height: 7vh;
+  height: 5vh;
   color: #c66d32;
   margin-bottom: 30px;
 }
@@ -32,7 +31,7 @@
 }
 
 .img{
-  height: 24rem;
+  height: 22rem;
 }
 
 @media (max-width: 550px) {

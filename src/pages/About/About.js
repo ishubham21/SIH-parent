@@ -19,11 +19,7 @@ const About = () => {
         <div className={style.txt}>
           <h1 className={style.heading}>About :</h1>
           <p className={style.abtxt}>
-            RIVHEHOVR RGJRJGR3 FWROR GRWOFIWEF WEGFOIRWG WROFI EWFPOE
-            WQDPC QPOFE FPO SPW DS POEDNE OPIOIQWNDE PIEF ECL QE QFOVN
-            EFOIVO QWDDL OQIE A ;KS C LJLD LLASS OIDND VODIVEW WIDVND
-            PIR ALJ NSIF 0EQ ID DJDD PRSKHET ID FI LOV FWEVIOWNQEPFINF
-            DIV EFPFIEEF EFPIF PRV EEFFOIV W
+          Learn and grow with celestial kids…. A smart learning application for parents to monitor the growth of their children in cognitive, psychomotor, and affective domains. It assists parents with a complete guide that ensures the necessary learning at an early age. The app is provided with amazing tasks and games for children to perform which could be tracked and monitored by their parents.
           </p>
         </div>
 
