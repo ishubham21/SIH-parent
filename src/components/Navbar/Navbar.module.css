@@ -10,6 +10,8 @@
   padding: 1.5em 4.5em;
   flex-wrap: nowrap;
   color: #655c5c;
+  position: relative;
+  z-index: 10;
 }
 
 .menu {
@@ -24,7 +26,7 @@
   padding-right: 4em;
 }
 
-.item_button {
+/* .item_button {
   font-family: "Poppins";
   font-weight: 500;
   font-size: 22px;
@@ -36,12 +38,14 @@
 }
 
 .item_button:active,
-.item_button:focus {
-  /* background-color: #ffd348; */
+.item_button:focus, .active {
   background-color: var(--navbar-button);
   color: #ffffff;
-}
+} */
 
+a{
+  text-decoration: none;
+}
 @media (max-width: 560px) {
   .navbar {
     justify-content: space-evenly;

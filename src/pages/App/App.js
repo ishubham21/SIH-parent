@@ -6,15 +6,20 @@ import About from "../About/About";
 import style from "./App.module.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navbar from "../../components/Navbar/Navbar";
+import SharedRoute from "../SharedRoute/SharedRoute";
 
 const App = () => {
   return (
     <>
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Login />} />
-          <Route path="/signup" element={<Signup />} />
-          <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="login" element={<Login />} />
+          <Route path="signup" element={<Signup />} />
+          <Route path="/" element={<SharedRoute />}>
+            <Route index element={<Dashboard />} />
+            <Route path="about" element={<About />} />
+            <Route path="progress" element={<Progress />} />
+          </Route>
         </Routes>
       </BrowserRouter>
     </>

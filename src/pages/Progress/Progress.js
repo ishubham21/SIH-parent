@@ -12,7 +12,7 @@ const Progress = () => {
 
   return (
     <div className={style.tasks_progress}>
-      <Navbar />
+      {/* <Navbar /> */}
       <div className={style.assign_tasks}>
         <p className={style.heading1}>Assign tasks:</p>
         <div className={style.wrapper}>

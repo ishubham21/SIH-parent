@@ -11,3 +11,27 @@
     #e3e8e9 85.42%
   );
 }
+
+.item_button:active,
+.item_button:focus,.active{
+  background-color: var(--navbar-button);
+  color: #ffffff;
+}
+
+.item_button {
+  font-family: "Poppins";
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 38px;
+  cursor: pointer;
+  padding: 0.2em 1em;
+  text-align: center;
+  border-radius: 10px;
+}
+
+@media (max-width: 560px){
+  .item_button {
+    font-size: 16px;
+    padding: 0.1em 0.8em;
+  }
+}

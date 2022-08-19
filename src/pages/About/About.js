@@ -14,7 +14,7 @@ const About = () => {
     <>
       <div className={style.about}>
         <div className={style.navbar}>
-          <Navbar />
+          {/* <Navbar /> */}
         </div>
         <div className={style.txt}>
           <h1 className={style.heading}>About :</h1>

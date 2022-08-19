@@ -41,7 +41,7 @@ const Dashboard = () => {
 
   return (
     <div className={style.dashboard}>
-      <Navbar />
+      {/* <Navbar /> */}
       <div className={style.content_wrapper}>
         {isEmpty && (
           <div className={style.left_div}>

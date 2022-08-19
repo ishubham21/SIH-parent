@@ -1,4 +1,5 @@
 import styles from "./ChildInfoDiv.module.css";
+import { Link } from "react-router-dom";
 
 const ChildInfoDiv = ({ color, gender, name }) => {
   return (
@@ -14,7 +15,7 @@ const ChildInfoDiv = ({ color, gender, name }) => {
           <p className={styles.detail}>Coins: 105</p>
         </div>
       </div>
-      <button className={styles.btn}>Tasks and Progress</button>
+      <Link to='progress'><button className={styles.btn}>Tasks and Progress</button></Link>
       {gender === "Male" && (
         <img
           src={require("../../assets/_0004.svg")}
