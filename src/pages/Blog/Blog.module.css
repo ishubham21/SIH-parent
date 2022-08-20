@@ -1,0 +1,35 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.blog {
+  height: 100vh;
+  overflow: hidden;
+  background: linear-gradient(180deg, #ffffff 55.74%, #9be684 55.73%);
+}
+.heading {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold",
+    sans-serif;
+  font-size: 40px;
+  font-weight: 100;
+  color: rgb(135, 160, 241);
+  text-align: center;
+  padding: 20px;
+  letter-spacing: 2px;
+}
+.blog_box {
+  display: flex;
+  justify-content: space-evenly;
+}
+.blog1,
+.blog2 {
+  background-color: #ffffff;
+  border-radius: 8px;
+  width: 22rem;
+  height: 28rem;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  box-sizing: border-box;
+  padding: 50px 45px;
+  font-family: "Poppins";
+}

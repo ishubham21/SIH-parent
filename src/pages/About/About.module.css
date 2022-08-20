@@ -30,7 +30,7 @@
   justify-content: center;
 }
 
-.img{
+.img {
   height: 22rem;
 }
 
@@ -46,11 +46,11 @@
     overflow: hidden;
   }
 
-  .img{
+  .img {
     height: 14rem;
   }
 
-  .img_wrap{
+  .img_wrap {
     position: fixed;
     bottom: 0;
     overflow: hidden;

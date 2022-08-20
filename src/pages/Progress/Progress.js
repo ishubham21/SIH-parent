@@ -16,6 +16,19 @@ const Progress = () => {
       <div className={style.assign_tasks}>
         <p className={style.heading1}>Assign tasks:</p>
         <div className={style.wrapper}>
+          <div className={style.assigned}>
+            <p className={style.heading2}>Assigned </p>
+            <div className={style.content_wrapper}>
+              <div className={style.content}>
+                <div className={style.task}>
+                  <p className={style.task_name}>VNDL BAEOJE</p>
+                  <div className={style.task_status}>
+                    <p className={style.status}>Assigned</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
           <div className={style.cognitive}>
             <p className={style.heading2}>cognitive</p>
             <div className={style.content_wrapper}>
@@ -23,31 +36,31 @@ const Progress = () => {
                 <div className={style.task}>
                   <p className={style.task_name}>VNDL BAEOJE</p>
                   <div className={style.task_status}>
-                    <p className={style.status}>Completed</p>
+                    <p className={style.status}>Assign</p>
                   </div>
                 </div>
                 <div className={style.task}>
                   <p className={style.task_name}>VNDL BAEOJE</p>
                   <div className={style.task_status}>
-                    <p className={style.status}>Completed</p>
+                    <p className={style.status}>Assign</p>
                   </div>
                 </div>
                 <div className={style.task}>
                   <p className={style.task_name}>VNDL BAEOJE</p>
                   <div className={style.task_status}>
-                    <p className={style.status}>Completed</p>
+                    <p className={style.status}>Assign</p>
                   </div>
                 </div>
                 <div className={style.task}>
                   <p className={style.task_name}>VNDL BAEOJE</p>
                   <div className={style.task_status}>
-                    <p className={style.status}>Completed</p>
+                    <p className={style.status}>Assign</p>
                   </div>
                 </div>
                 <div className={style.task}>
                   <p className={style.task_name}>VNDL BAEOJE</p>
                   <div className={style.task_status}>
-                    <p className={style.status}>Completed</p>
+                    <p className={style.status}>Assign</p>
                   </div>
                 </div>
               </div>
@@ -60,7 +73,7 @@ const Progress = () => {
                 <div className={style.task}>
                   <p className={style.task_name}>VNDL BAEOJE</p>
                   <div className={style.task_status}>
-                    <p className={style.status}>Completed</p>
+                    <p className={style.status}>Assign</p>
                   </div>
                 </div>
               </div>

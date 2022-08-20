@@ -4,11 +4,12 @@ import Progress from "../Progress/Progress";
 import Signup from "../Signup/Signup";
 import About from "../About/About";
 import style from "./App.module.css";
+import Blog from "../Blog/Blog";
 
 const App = () => {
   return (
     <>
-      <About />
+      <Blog />
     </>
   );
 };
