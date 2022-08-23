@@ -13,9 +13,7 @@ const About = () => {
   return (
     <>
       <div className={style.about}>
-        <div className={style.navbar}>
-          {/* <Navbar /> */}
-        </div>
+        <div className={style.navbar}>{/* <Navbar /> */}</div>
         <div className={style.txt}>
           <h1 className={style.heading}>About :</h1>
           <p className={style.abtxt}>

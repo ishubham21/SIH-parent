@@ -12,13 +12,13 @@
   color: #000000;
 }
 
-.close_btn{
+.close_btn {
   position: absolute;
   top: 10px;
   right: 20px;
 }
 
-.img{
+.img {
   height: 32px;
   cursor: pointer;
 }

@@ -5,7 +5,11 @@ const Modal = ({ show, setShow, setFormIsOpen }) => {
   return (
     <div className={style.modal}>
       <div>
-        <AddChildForm show={show} setShow={setShow} setFormIsOpen={setFormIsOpen} />
+        <AddChildForm
+          show={show}
+          setShow={setShow}
+          setFormIsOpen={setFormIsOpen}
+        />
       </div>
     </div>
   );

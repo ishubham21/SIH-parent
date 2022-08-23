@@ -61,7 +61,10 @@ const Dashboard = () => {
               </p>
             )}
             {formIsOpen && (
-              <AddChildForm setFormIsOpen={setFormIsOpen} setShow={setShow} />
+              <AddChildForm
+                setFormIsOpen={setFormIsOpen}
+                setShow={setShow}
+              />
             )}
           </div>
         )}
@@ -115,7 +118,13 @@ const Dashboard = () => {
           </div>
         </div>
       )}
-      {show && <Modal show={show} setShow={setShow} setFormIsOpen={setFormIsOpen} />}
+      {show && (
+        <Modal
+          show={show}
+          setShow={setShow}
+          setFormIsOpen={setFormIsOpen}
+        />
+      )}
     </div>
   );
 };
