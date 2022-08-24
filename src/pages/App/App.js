@@ -7,8 +7,12 @@ import style from "./App.module.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navbar from "../../components/Navbar/Navbar";
 import SharedRoute from "../SharedRoute/SharedRoute";
+import ProtectedRoute from "../ProtectedRoute/ProtectedRoute";
+import { useEffect } from "react";
 
 const App = () => {
+
+  const parentToken = localStorage.getItem("parent-token");
   return (
     <>
       <BrowserRouter>
@@ -16,7 +20,11 @@ const App = () => {
           <Route path="login" element={<Login />} />
           <Route path="signup" element={<Signup />} />
           <Route path="/" element={<SharedRoute />}>
-            <Route index element={<Dashboard />} />
+            <Route index element={
+              <ProtectedRoute parentToken={parentToken}>
+                <Dashboard />
+              </ProtectedRoute>
+            } />
             <Route path="about" element={<About />} />
             <Route path="progress" element={<Progress />} />
           </Route>

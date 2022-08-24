@@ -1,12 +1,38 @@
 import { useState } from "react";
+import { useNavigate } from 'react-router-dom';
 import style from "./Signup.module.css";
 
 const Signup = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [pwd, setPwd] = useState("");
+  const navigate = useNavigate();
   const handleSubmit = (e) => {
     e.preventDefault();
+    fetch('https://sih-backend-rtu-alpha.vercel.app/auth/parent/register', {
+
+    method: "POST",
+
+    body: JSON.stringify({
+      "name": name,
+      "email": email,
+      "password": pwd
+    }),
+
+    headers: {
+      "Content-type": "application/json"
+    }
+    })
+    .then(response => response.json())
+    .then(response => {
+      console.log(response)
+      if(!response.error)
+      navigate('/login');
+      else{
+        alert(response.error);
+      }
+      
+    })
   };
 
   return (
@@ -43,7 +69,7 @@ const Signup = () => {
               <label className={style.label}>Email</label>
               <input
                 className={style.field}
-                type="text"
+                type="email"
                 required
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
@@ -51,7 +77,7 @@ const Signup = () => {
               <label className={style.label}>Password</label>
               <input
                 className={style.field}
-                type="text"
+                type="password"
                 required
                 value={pwd}
                 onChange={(e) => setPwd(e.target.value)}

@@ -1,5 +1,5 @@
 import style from "./AddChildForm.module.css";
-
+// 0-2(toddler) 3-6(preschool) 7-12(preteen)  13-14(teen)
 const AddChildForm = ({ setFormIsOpen, show, setShow }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -26,30 +26,48 @@ const AddChildForm = ({ setFormIsOpen, show, setShow }) => {
         <label className={style.name}>Name:</label>
         <input type="text" className={style.text_input} required />
         <p className={style.catagory}>Age Group:</p>
-        <label>5-7</label>
-        <input
-          type="radio"
-          name="age group"
-          value="5-7"
-          className={style.radio_btn}
-          required
-        />
-        <label>8-10</label>
-        <input
-          type="radio"
-          name="age group"
-          value="8-10"
-          className={style.radio_btn}
-          required
-        />
-        <label>11-14</label>
-        <input
-          type="radio"
-          name="age group"
-          value="11-14"
-          className={style.radio_btn}
-          required
-        />
+        <div className={style.category_container}>
+          <div className={style.catagory_option}>
+            <label>0-2(Toddler)</label>
+            <input
+              type="radio"
+              name="age group"
+              value="0-2"
+              className={style.radio_btn}
+              required
+            />
+          </div>
+          <div className={style.catagory_option}>
+            <label>3-6(PreSchool)</label>
+            <input
+              type="radio"
+              name="age group"
+              value="3-6"
+              className={style.radio_btn}
+              required
+            />
+          </div>
+          <div className={style.catagory_option}>
+            <label>7-12(PreTeen)</label>
+            <input
+              type="radio"
+              name="age group"
+              value="7-12"
+              className={style.radio_btn}
+              required
+            />
+          </div>
+          <div className={style.catagory_option}>
+            <label>13-14(Teen)</label>
+            <input
+              type="radio"
+              name="age group"
+              value="13-14"
+              className={style.radio_btn}
+              required
+            />
+          </div>
+        </div>
         <p className={style.catagory}>Gender:</p>
         <label>Male</label>
         <input
