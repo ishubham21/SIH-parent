@@ -5,7 +5,6 @@ import Modal from "../../components/Modal/Modal";
 import Navbar from "../../components/Navbar/Navbar";
 import style from "./Dashboard.module.css";
 import { useNavigate } from "react-router-dom";
-import { chdir } from "process";
 
 const Dashboard = () => {
   const navigate = useNavigate();

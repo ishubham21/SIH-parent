@@ -15,7 +15,9 @@ const ChildInfoDiv = ({ color, gender, name }) => {
           <p className={styles.detail}>Coins: 105</p>
         </div>
       </div>
-      <Link to='progress'><button className={styles.btn}>Tasks and Progress</button></Link>
+      <Link to="progress">
+        <button className={styles.btn}>Tasks and Progress</button>
+      </Link>
       {gender === "Male" && (
         <img
           src={require("../../assets/_0004.svg")}
