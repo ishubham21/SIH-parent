@@ -8,13 +8,15 @@
   overflow: hidden;
   background: var(--dashboard-bg);
   box-sizing: border-box;
+  position: relative;
+  bottom: 105px
 }
 
 .content_wrapper {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  /* margin-top: 4em; */
+  margin-top: 2.5em;
 }
 
 .left_div {

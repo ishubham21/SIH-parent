@@ -1,11 +1,13 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
 import { useNavigate } from 'react-router-dom';
 import style from "./Login.module.css";
+import TokenContext from "../../context/TokenContext";
 
 const Login = () => {
   const [email, setEmail] = useState("");
   const [pwd, setPwd] = useState("");
   const navigate = useNavigate();
+  const { token, updateToken } = useContext(TokenContext);
   const handleSubmit = (e) => {
     e.preventDefault();
     fetch("https://sih-backend-rtu-alpha.vercel.app/auth/parent/login", {
@@ -24,6 +26,7 @@ const Login = () => {
     .then(response => {
       if(!response.error){
         localStorage.setItem('parent-token', response.data.token);
+        updateToken(response.data.token);
         console.log(response.data.token);
         navigate('/');
       }

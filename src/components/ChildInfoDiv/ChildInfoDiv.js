@@ -1,18 +1,17 @@
 import styles from "./ChildInfoDiv.module.css";
 import { Link } from "react-router-dom";
 
-const ChildInfoDiv = ({ color, gender, name }) => {
+const ChildInfoDiv = ({ color, gender, name, ageGrp, coins }) => {
   return (
     <div className={styles.child_info_div} style={color}>
       <p className={styles.name}>{name}</p>
       <div className={styles.details_wrapper}>
         <div className={styles.div_1}>
-          <p className={styles.detail}>Age: 11</p>
+          <p className={styles.detail}>Coins: {coins}</p>
           <p className={styles.detail}>Sex: {gender}</p>
         </div>
         <div className={styles.div_2}>
-          <p className={styles.detail}>Streak: 35</p>
-          <p className={styles.detail}>Coins: 105</p>
+        <p className={styles.detail}>Age Group: {ageGrp}</p>
         </div>
       </div>
       <Link to="progress">

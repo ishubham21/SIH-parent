@@ -2,28 +2,15 @@ import { useState, useEffect } from "react";
 import AddChildForm from "../../components/AddChildForm/AddChildForm";
 import ChildInfoDiv from "../../components/ChildInfoDiv/ChildInfoDiv";
 import Modal from "../../components/Modal/Modal";
-import Navbar from "../../components/Navbar/Navbar";
 import style from "./Dashboard.module.css";
-import { useNavigate } from "react-router-dom";
 
 const Dashboard = () => {
-  const navigate = useNavigate();
-
   const [formIsOpen, setFormIsOpen] = useState(false);
-  const [isEmpty, setIsEmpty] = useState(false);
+  const [isEmpty, setIsEmpty] = useState(true);
   const [show, setShow] = useState(false);
-  const [logged, setLogged] = useState(false);
   const [children, setChildren] = useState([]);
 
   const parentToken = localStorage.getItem("parent-token");
-
-  useEffect(() => {
-    if (parentToken) {
-      setLogged(true);
-    } else {
-      navigate("/login");
-    }
-  }, []);
 
   useEffect(() => {
     document.documentElement.style.setProperty(
@@ -34,7 +21,6 @@ const Dashboard = () => {
   }, []);
 
   useEffect(() => {
-    if (parentToken) {
       fetch(
         "https://sih-backend-rtu-alpha.vercel.app/auth/parent/dashboard",
         {
@@ -45,14 +31,14 @@ const Dashboard = () => {
       )
         .then((res) => res.json())
         .then((parentData) => {
-          console.log(parentData);
-          setChildren(parentData.data.children);
-          console.log(children);
+          setChildren(parentData.data.children)
+          if(parentData.data.children.length!==0){
+            setIsEmpty(false)
+          }
         })
         .catch((err) => {
           console.log(err);
         });
-    }
   }, []);
 
   useEffect(() => {
@@ -78,7 +64,7 @@ const Dashboard = () => {
 
   return (
     <>
-      {logged && (
+       (
         <div className={style.dashboard}>
           {/* <Navbar /> */}
           <div className={style.content_wrapper}>
@@ -122,7 +108,7 @@ const Dashboard = () => {
                 />
               </div>
             )}
-            {/* {!isEmpty && (
+            {!isEmpty && (
               <div className={style.children}>
                 {children.map((child) => {
                   let backgroundColor = "#f9b957";
@@ -135,11 +121,13 @@ const Dashboard = () => {
                       color={{ backgroundColor }}
                       gender={child.gender}
                       name={child.name}
+                      ageGrp={child.ageGroup}
+                      coins={child.coins}
                     />
                   );
                 })}
               </div>
-            )} */}
+            )}
           </div>
           {!isEmpty && (
             <div className={style.footer}>
@@ -159,7 +147,7 @@ const Dashboard = () => {
             />
           )}
         </div>
-      )}
+      )
     </>
   );
 };
