@@ -13,6 +13,8 @@ import { TokenProvider } from "../../context/TokenContext";
 import { ParentProvider } from "../../context/parentContext";
 import Blog from "../Blog/Blog";
 import ProgressCard from "../ProgressCard/ProgressCard";
+import Meeting from "../../components/Meeting/Meeting";
+import Appointment from "../Appointment/Appointment"
 
 
 const App = () => {
@@ -34,6 +36,7 @@ const App = () => {
             } />
             <Route path="about" element={<About />} />
             <Route path="progress" element={<Progress />} />
+            <Route path="meeting" element={<Appointment />} />
           </Route>
         </Routes>
       </BrowserRouter>

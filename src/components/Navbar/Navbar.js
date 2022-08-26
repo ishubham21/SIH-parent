@@ -30,6 +30,16 @@ const Navbar = () => {
           {/* <li className={style.item}>
                         <div className={style.item_button} tabIndex="2">COMMUNITY</div>
                     </li> */}
+                          <li className={style.item}>
+            <NavLink
+              to="meeting"
+              className={({ isActive }) =>
+                isActive ? "active item_button" : "item_button"
+              }
+            >
+              calendly
+            </NavLink>
+          </li>
         </ul>
       </div>
       <div className={`${style.right_div} item_button`} onClick={()=>{localStorage.clear();
