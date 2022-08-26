@@ -109,8 +109,17 @@
 
 @media (max-width: 550px) {
   .dashboard {
+<<<<<<< HEAD
     background: var(--dashboard-bg-mobile);
     overflow-y: auto;
+=======
+    background: linear-gradient(
+      180deg,
+      #5d9cfb 85.41%,
+      #e3e8e9 85.42%
+    );
+    overflow-x: hidden;
+>>>>>>> payonidhi
   }
 
   .content_wrapper {

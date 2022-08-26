@@ -12,7 +12,12 @@ const Progress = () => {
 
   return (
     <div className={style.tasks_progress}>
+<<<<<<< HEAD
       {/* <Navbar /> */}
+=======
+      <Navbar />
+      
+>>>>>>> payonidhi
       <div className={style.assign_tasks}>
         <p className={style.heading1}>Assign tasks:</p>
         <div className={style.wrapper}>
@@ -81,23 +86,28 @@ const Progress = () => {
           </div>
         </div>
       </div>
-      <div className={style.progress}>
-        <div className={style.text}>
-          <p className={style.heading}>Weekly Progress:</p>
-          <p className={style.nrml_text}>
-            The given graph contains the performance stats of both
-            Congnitive and Psychomotive progress on the daily basis
-          </p>
+      
+    
+            <div className={style.galleryWrapper}>
+               <div className={style.heading}> <p >VIRTUAL GALLERY TO CHERISH YOUR MEMORIES</p></div>
+                <div className={style.imgWrapper}>
+                <div className={style.img_div}>
+                    <img
+                    src = {require("../../assets/galleryimg1.jpeg")}
+                    alt=""
+                    className={style.galleryImg}/>
+                </div>
+                <div className={style.img_div}>
+                    <img
+                    src = {require("../../assets/galleryimg2.jpeg")}
+                    alt =""
+                    className={style.galleryImg}/>
+                </div>
+                </div>
+            </div>
         </div>
-        <div className={style.graph}>
-          <img
-            src={require("../../assets/Months.svg")}
-            alt=""
-            className={style.img}
-          />
-        </div>
-      </div>
-    </div>
+    
+    
   );
 };
 

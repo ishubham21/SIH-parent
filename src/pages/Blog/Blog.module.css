@@ -1,3 +1,7 @@
+.blog{
+  height: 100vh;
+  overflow-x: hidden;
+}
 .main {
   display: flex;
   justify-content: center;
@@ -61,5 +65,8 @@
   }
   .story p {
     font-size: 1.5rem;
+  }
+  .blog{
+    overflow-x: hidden;
   }
 }

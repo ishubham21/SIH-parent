@@ -1,11 +1,11 @@
 import style from "./Milestones.module.css";
 import Navbar from "../../components/Navbar/Navbar";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
-const Milestones = ({ setFormIsOpen }) => {
+const Milestones = () => {
+  const [formIsOpen, setFormIsOpen] = useState(false);
   const handleSubmit = (e) => {
     e.preventDefault();
-    setFormIsOpen(false);
   };
   useEffect(() => {
     document.documentElement.style.setProperty(
@@ -82,7 +82,9 @@ const Milestones = ({ setFormIsOpen }) => {
                   <label className={style.ms_name}>kid can eat</label>
                 </li>
               </ul>
-              <button>Save</button>
+              <button>
+                Save
+              </button>
             </form>
           </div>
         </div>
