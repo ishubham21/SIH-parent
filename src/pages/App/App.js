@@ -24,8 +24,7 @@ const App = () => {
     <TokenProvider>
       <ParentProvider>
         <BrowserRouter>
-        <ProgressCard/>
-          {/* <Routes>
+          <Routes>
             <Route path="login" element={<Login />} />
             <Route path="signup" element={<Signup />} />
             <Route path="/" element={<SharedRoute />}>
@@ -40,8 +39,9 @@ const App = () => {
               <Route path="about" element={<About />} />
               <Route path="progress" element={<Progress />} />
               <Route path="meeting" element={<Appointment />} />
+              <Route path="percent" element={<ProgressCard />}/>
             </Route>
-          </Routes> */}
+          </Routes>
         </BrowserRouter>
       </ParentProvider>
     </TokenProvider>

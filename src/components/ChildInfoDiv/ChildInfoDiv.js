@@ -15,7 +15,10 @@ const ChildInfoDiv = ({ color, gender, name, ageGrp, coins }) => {
         </div>
       </div>
       <Link to="progress">
-        <button className={styles.btn}>Tasks and Progress</button>
+        <button className={styles.btn}>Assign Tasks</button>
+      </Link>
+      <Link to="percent">
+        <button className={styles.btn}>View Progress</button>
       </Link>
       {gender === "Male" && (
         <img
