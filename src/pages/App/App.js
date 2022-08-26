@@ -14,6 +14,7 @@ import { ParentProvider } from "../../context/parentContext";
 import Blog from "../Blog/Blog";
 import ProgressCard from "../ProgressCard/ProgressCard";
 
+
 const App = () => {
   // const [token, setToken] = useState(localStorage.getItem("parent-token"));
   // const parentToken = localStorage.getItem("parent-token");

@@ -12,12 +12,6 @@ const Progress = () => {
 
   return (
     <div className={style.tasks_progress}>
-<<<<<<< HEAD
-      {/* <Navbar /> */}
-=======
-      <Navbar />
-      
->>>>>>> payonidhi
       <div className={style.assign_tasks}>
         <p className={style.heading1}>Assign tasks:</p>
         <div className={style.wrapper}>
