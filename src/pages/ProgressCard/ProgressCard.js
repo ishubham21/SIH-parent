@@ -1,9 +1,6 @@
 import style from "./ProgressCard.module.css";
 import Navbar from "../../components/Navbar/Navbar";
 import { useEffect, useState } from "react";
-import { Doughnut } from "react-chartjs-2";
-import { Chart as ChartJS, registerables } from "chart.js";
-import { Line } from "react-chartjs-2";
 
 const ProgressCard = ({ childId }) => {
   const [childStats, setChildStats] = useState(null);
