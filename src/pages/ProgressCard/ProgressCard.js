@@ -24,7 +24,6 @@ const ProgressCard = ({ childId }) => {
 
   return (
     <div className={style.progresscard}>
-      <Navbar />
       {childStats && (
         <div className={style.wrapper}>
           <div className={style.progressReport}>
