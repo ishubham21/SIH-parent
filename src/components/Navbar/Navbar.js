@@ -1,7 +1,8 @@
 import style from "./Navbar.module.css";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 
 const Navbar = () => {
+  const navigate = useNavigate();
   return (
     <div className={style.navbar}>
       <div className={style.left_div}>
@@ -31,15 +32,9 @@ const Navbar = () => {
                     </li> */}
         </ul>
       </div>
-      <div className={style.right_div}>
-        <NavLink
-          to="/profile"
-          className={({ isActive }) =>
-            isActive ? "active item_button" : "item_button"
-          }
-        >
-          Profile
-        </NavLink>
+      <div className={`${style.right_div} item_button`} onClick={()=>{localStorage.clear();
+      navigate("/login")}}>
+         Logout
       </div>
     </div>
   );
