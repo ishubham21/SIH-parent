@@ -17,16 +17,6 @@ const Navbar = () => {
               HOME
             </NavLink>
           </li>
-          <li className={style.item}>
-            <NavLink
-              to="about"
-              className={({ isActive }) =>
-                isActive ? "active item_button" : "item_button"
-              }
-            >
-              About
-            </NavLink>
-          </li>
           {/* <li className={style.item}>
                         <div className={style.item_button} tabIndex="2">COMMUNITY</div>
                     </li> */}
@@ -37,7 +27,7 @@ const Navbar = () => {
                 isActive ? "active item_button" : "item_button"
               }
             >
-              calendly
+              Appointment
             </NavLink>
           </li>
         </ul>
