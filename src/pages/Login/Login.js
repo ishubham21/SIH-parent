@@ -12,12 +12,14 @@ const Login = () => {
     <>
       <div className={style.login}>
         <div className={style.decor}>
-          <p className={style.name}>SOMETHING</p>
+          <p className={style.name}>SUMEDHA</p>
+          <div className={style.imgContainer}>
           <img
             src={require("../../assets/Kid fly 1.svg")}
             alt=""
             className={style.img}
           />
+          </div>
         </div>
         <div className={style.login_form}>
           <div className={style.form_text}>

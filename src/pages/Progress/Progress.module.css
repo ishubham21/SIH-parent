@@ -4,15 +4,14 @@
 }
 
 .tasks_progress {
-  background: linear-gradient(180deg, #f9b957 55.73%, #ffffff 55.74%);
+  background: linear-gradient(180deg, #f9b957 60.73%, #ffffff 60.74%);
   height: 100vh;
-  overflow: hidden;
   font-family: "Poppins";
 }
 
 .assign_tasks {
   max-height: 40%;
-  padding: 0 65px;
+  padding: 20px 20px 65px;
 }
 
 .heading1 {
@@ -35,13 +34,14 @@
   align-items: center;
   justify-content: space-between;
   position: relative;
-  bottom: 30px;
+  bottom: 10px;
 }
 
 .cognitive,
 .psychomotor,
 .assigned {
-  width: 30rem;
+  width: 25rem;
+  height: 30rem;
 }
 .content_wrapper {
   background-color: #ffffff;
@@ -91,15 +91,16 @@
   color: #ffffff;
   padding: 3px 10px;
   cursor: pointer;
+  font-size: 20px;
 }
 
 .progress {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 45px 80px;
   box-sizing: border-box;
 }
+
 .text {
   display: flex;
   flex-direction: column;
@@ -125,22 +126,26 @@
 }
 
 .img {
-  height: 220px;
+  height: 10vh;
 }
-
+.graph{
+  padding: 20px 10px;
+}
 @media (max-width: 550px) {
   .tasks_progress {
     background: linear-gradient(
       180deg,
-      #ffd348 48.44%,
-      #ffffff 48.45%,
+      #ffd348 50.44%,
+      #ffffff 50.45%,
       #ffffff 51.04%
     );
+    overflow-x: hidden;
   }
 
   .assign_tasks {
     padding: 0 20px;
     height: 35%;
+    
   }
 
   .heading1 {
@@ -159,7 +164,7 @@
   .cognitive,
   .psychomotor,
   .assigned {
-    width: 9rem;
+    width: 7rem;
   }
 
   .content_wrapper {
@@ -171,7 +176,6 @@
 
   .task {
     flex-direction: column;
-    align-items: flex-start;
   }
 
   .task_name {
@@ -212,5 +216,36 @@
 
   .img {
     height: 190px;
+  }
+}
+
+
+.gallery{
+  background-color:rgb(170, 170, 144) ;
+}
+.galleryWrapper{
+  font-family: "Poppins";
+  font-size: 40px;
+  color: rgb(16, 36, 72);
+  text-align: center;
+}
+
+.imgWrapper{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding-top: 20px;
+}
+.galleryImg{
+  height: 300px;
+  width: 300px;
+  border-radius: 15px;
+}
+@media (max-width:550px) {
+  .imgWrapper{
+      flex-direction: column;
+  }
+  .heading{
+      font-size: 20px;
   }
 }

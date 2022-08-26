@@ -66,6 +66,7 @@
       #5d9cfb 85.41%,
       #e3e8e9 85.42%
     );
+    overflow-x: hidden;
   }
 
   .content_wrapper {

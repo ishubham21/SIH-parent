@@ -13,9 +13,9 @@ const Signup = () => {
     <>
       <div className={style.signup}>
         <div className={style.decor}>
-          <p className={style.name}>SOMETHING</p>
+          <p className={style.name}>SUMEDHA</p>
           <img
-            src={require("../../assets/Kid fly 1.svg")}
+            src={require("../../assets/sumedha white.png")}
             alt=""
             className={style.img}
           />
@@ -24,9 +24,9 @@ const Signup = () => {
           <div className={style.form_text}>
             <p className={style.heading}>SIGN UP</p>
             <p className={style.sub_heading}>
-              Don’t have an account?{" "}
+              Have an account?{" "}
               <a href="#" className={style.link}>
-                Sign up
+                Login
               </a>
             </p>
           </div>

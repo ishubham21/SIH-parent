@@ -34,8 +34,12 @@
 .img {
   width: 29rem;
   height: 30rem;
+ 
+}
+.imgContainer{
   margin-right: 194px;
   margin-left: 100px;
+  display: flex;
 }
 
 .login_form {
@@ -119,41 +123,53 @@
 
 @media (max-width: 550px) {
   .login {
-    flex-direction: column-reverse;
+    flex-direction: column;
     background: no-repeat url(../../assets/Mask_Group_6.svg),
       linear-gradient(180deg, #5d9cfb 85.41%, #e3e8e9 85.42%);
-    background-position: -30px bottom;
+    /* background-position: -1px bottom; */
   }
+
 
   .img {
     display: none;
+    width: 100%;
+    padding-top: 200vh;
+    opacity: 0.3;
   }
+  /* .imgContainer{
+    margin-top: 200vh;
+
+  } */
 
   .name {
-    top: 60px;
+    top: 30px;
     right: 15px;
-    font-size: 22px;
+    font-size: 30px;
   }
 
   .login_form {
     width: 17rem;
-    height: 20rem;
-    margin-top: 20px;
+    height: 22rem;
     padding: 27px 32px;
+    margin-bottom: 7rem;
     border-radius: 20px;
+    position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   }
 
   .heading {
-    font-size: 22px;
+    font-size: 24px;
     letter-spacing: 4px;
   }
 
   .sub_heading {
-    font-size: 12px;
+    font-size: 14px;
   }
 
   .label {
-    font-size: 13px;
+    font-size: 14px;
   }
 
   .field {
