@@ -1,63 +1,79 @@
 import style from "./ProgressCard.module.css";
 import Navbar from "../../components/Navbar/Navbar";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
-const ProgressCard = () => {
-    useEffect(() => {
-        document.documentElement.style.setProperty(
-          "--navbar-button",
-          "#A390FB",
-        );
-      }, []);
+const ProgressCard = ({ childId }) => {
+  const [childStats, setChildStats] = useState(null);
 
-    return(
-        <div className={style.progresscard}>
-            <Navbar />
-            <div className={style.wrapper}>
-                <div className={style.progressReport}>
-                    <h1>93 percentile</h1>
-                    <p className={style.report}>Topic of the quiz : Math</p>
-                    <p className={style.report}>Total students appeared: 30</p>
-                    <div className={style.btnBox}><button className={style.bttn}>Show More</button></div>
-                </div>
-                <div className={style.graph}>
-                    <div className={style.barGraph}>
-                        <div className={style.imgData}>
-                        <div className={style.img1}>
-                            <img
-                            src={require("../../assets/Amount.svg")}
-                            alt="" />
-                        </div>
-                        <div className={style.img2}>
-                            <img
-                            src={require("../../assets/Months.svg")}
-                            alt="" />
-                        </div>
-                        </div>
-                        <div className={style.img3}>
-                            <img
-                            src={require("../../assets/Months (1).svg")}
-                            alt ="" />
-                        </div>
-                    </div>
-                    <div className={style.list}>
-                        <div className={style.list_items}>
-                            <ul className={style.col_heading}>
-                                <li>Total Questions</li>
-                                <li>Right Answers</li>
-                                <li>Final Score</li>
-                            </ul>
-                        </div>
-                        <div className={style.container}>
-                            <div className={style.box}>10</div>
-                            <div className={style.box}>6</div>
-                            <div className={style.box}>60</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+  useEffect(() => {
+    document.documentElement.style.setProperty(
+      "--navbar-button",
+      "#A390FB",
     );
+  }, []);
+
+  useEffect(() => {
+    fetch(
+      "https://sih-backend-rtu-alpha.vercel.app/child/stats/5be45953-696f-4d1e-a8c2-accabee2b764",
+    )
+      .then((res) => res.json())
+      .then((data) => {
+        setChildStats(data.tasks);
+      });
+  }, []);
+
+  return (
+    <div className={style.progresscard}>
+      <Navbar />
+      {childStats && (
+        <div className={style.wrapper}>
+          <div className={style.progressReport}>
+            <h1>
+              {childStats[childStats.length - 1].percentile}{" "}
+              percentile
+            </h1>
+            <p className={style.report}>
+              Name of the quiz :{" "}
+              {childStats[childStats.length - 1].taskName}
+            </p>
+            <p className={style.report}>
+              Total students appeared:{" "}
+              {childStats[childStats.length - 1].noOfParticipants}
+            </p>
+          </div>
+          <div className={style.graph}>
+            <div className={style.barGraph}>
+              <div className={style.imgData}></div>
+            </div>
+            <div className={style.list}>
+              <div className={style.list_items}>
+                <ul className={style.col_heading}>
+                  <li>Task Name</li>
+                  <li>No of Participants</li>
+                  <li>Percentile</li>
+                </ul>
+              </div>
+              {childStats.map((task) => {
+                return (
+                  <>
+                    <div className={style.container}>
+                      <div className={style.box}>{task.taskName}</div>
+                      <div className={style.box}>
+                        {task.noOfParticipants}
+                      </div>
+                      <div className={style.box}>
+                        {task.percentile}
+                      </div>
+                    </div>
+                  </>
+                );
+              })}
+            </div>
+          </div>
+        </div>
+      )}
+    </div>
+  );
 };
 
 export default ProgressCard;
