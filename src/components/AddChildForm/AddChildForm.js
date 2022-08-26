@@ -1,10 +1,55 @@
 import style from "./AddChildForm.module.css";
-// 0-2(toddler) 3-6(preschool) 7-12(preteen)  13-14(teen)
+import ParentContext from "../../context/parentContext";
+import { useContext, useState } from "react";
+import Select from "react-select";
 const AddChildForm = ({ setFormIsOpen, show, setShow }) => {
+  const { parentData, updateParentData } = useContext(ParentContext);
+  const [name, setName] = useState(" ");
+  const ageOptions = [
+    { value: "Toddler", label: "0-2(Toddler)" },
+    { value: "Preschool", label: "3-6(PreSchool)" },
+    { value: "Preteen", label: "7-12(PreTeen)" },
+    { value: "Teen", label: "13-14(Teen)" },
+  ];
+  const genderOptions = [
+    { value: "Male", label: "Male" },
+    { value: "Female", label: "Female" },
+    { value: "Other", label: "Other" },
+  ];
+  const [ageGroup, setAgeGroup] = useState(null);
+  const [gender, setGender] = useState(null);
   const handleSubmit = (e) => {
     e.preventDefault();
     setFormIsOpen(false);
     setShow(false);
+    fetch(
+      "https://sih-backend-rtu-alpha.vercel.app/parent/add-child",
+      {
+        method: "POST",
+        body: JSON.stringify({
+          name: name,
+          ageGroup: ageGroup.value,
+          gender: gender.value,
+          parentId: parentData.id,
+        }),
+        headers: {
+          "Content-type": "application/json"
+        }
+      }
+    ).then((data) => {
+      fetch(
+        `https://sih-backend-rtu-alpha.vercel.app/parent/data/${parentData.id}`,
+      )
+        .then((res) => {
+          return res.json();
+        })
+        .then((res) => {
+          updateParentData(res.data);
+        });
+    }).catch(err=>{
+      console.log(err);
+    })
+    
   };
   return (
     <div className={style.add_child_form}>
@@ -24,66 +69,27 @@ const AddChildForm = ({ setFormIsOpen, show, setShow }) => {
       <p className={style.heading}>CHILD DETAILS</p>
       <form onSubmit={(e) => handleSubmit(e)}>
         <label className={style.name}>Name:</label>
-        <input type="text" className={style.text_input} required />
-        <p className={style.catagory}>Age Group:</p>
-        <div className={style.category_container}>
-          <div className={style.catagory_option}>
-            <label>0-2(Toddler)</label>
-            <input
-              type="radio"
-              name="age group"
-              value="0-2"
-              className={style.radio_btn}
-              required
-            />
-          </div>
-          <div className={style.catagory_option}>
-            <label>3-6(PreSchool)</label>
-            <input
-              type="radio"
-              name="age group"
-              value="3-6"
-              className={style.radio_btn}
-              required
-            />
-          </div>
-          <div className={style.catagory_option}>
-            <label>7-12(PreTeen)</label>
-            <input
-              type="radio"
-              name="age group"
-              value="7-12"
-              className={style.radio_btn}
-              required
-            />
-          </div>
-          <div className={style.catagory_option}>
-            <label>13-14(Teen)</label>
-            <input
-              type="radio"
-              name="age group"
-              value="13-14"
-              className={style.radio_btn}
-              required
-            />
-          </div>
-        </div>
-        <p className={style.catagory}>Gender:</p>
-        <label>Male</label>
         <input
-          type="radio"
-          name="gender"
-          value="male"
-          className={style.radio_btn}
+          type="text"
+          className={style.text_input}
+          value={name}
+          onChange={(e) => {
+            setName(e.target.value);
+          }}
           required
         />
-        <label>Female</label>
-        <input
-          type="radio"
-          name="gender"
-          value="female"
-          className={style.radio_btn}
-          required
+        <p className={style.catagory}>Age Group:</p>
+        <Select
+          defaultValue={ageGroup}
+          onChange={setAgeGroup}
+          options={ageOptions}
+        />
+
+        <p className={style.catagory}>Gender:</p>
+        <Select
+          defaultValue={gender}
+          onChange={setGender}
+          options={genderOptions}
         />
         <button className={style.btn}>Save</button>
       </form>

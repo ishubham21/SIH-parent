@@ -10,6 +10,7 @@ import SharedRoute from "../SharedRoute/SharedRoute";
 import ProtectedRoute from "../ProtectedRoute/ProtectedRoute";
 import { useEffect, useState } from "react";
 import { TokenProvider } from "../../context/TokenContext";
+import { ParentProvider } from "../../context/parentContext";
 
 const App = () => {
   // const [token, setToken] = useState(localStorage.getItem("parent-token"));
@@ -17,6 +18,7 @@ const App = () => {
 
   return (
     <TokenProvider>
+      <ParentProvider>
       <BrowserRouter>
         <Routes>
           <Route path="login" element={<Login />} />
@@ -32,6 +34,7 @@ const App = () => {
           </Route>
         </Routes>
       </BrowserRouter>
+      </ParentProvider>
     </TokenProvider>
   );
 };

@@ -1,14 +1,16 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import AddChildForm from "../../components/AddChildForm/AddChildForm";
 import ChildInfoDiv from "../../components/ChildInfoDiv/ChildInfoDiv";
 import Modal from "../../components/Modal/Modal";
 import style from "./Dashboard.module.css";
+import ParentContext from "../../context/parentContext";
 
 const Dashboard = () => {
   const [formIsOpen, setFormIsOpen] = useState(false);
   const [isEmpty, setIsEmpty] = useState(true);
   const [show, setShow] = useState(false);
   const [children, setChildren] = useState([]);
+  const { parentData, updateParentData } = useContext(ParentContext);
 
   const parentToken = localStorage.getItem("parent-token");
 
@@ -32,10 +34,13 @@ const Dashboard = () => {
         .then((res) => res.json())
         .then((parentData) => {
           setChildren(parentData.data.children)
+          localStorage.setItem("parent-data", parentData.data)
+          updateParentData(parentData.data)
           if(parentData.data.children.length!==0){
             setIsEmpty(false)
           }
         })
+        .then(data=> console.log(parentData))
         .catch((err) => {
           console.log(err);
         });
@@ -110,7 +115,7 @@ const Dashboard = () => {
             )}
             {!isEmpty && (
               <div className={style.children}>
-                {children.map((child) => {
+                {parentData.children.map((child) => {
                   let backgroundColor = "#f9b957";
                   if (child.gender == "Male")
                     backgroundColor = "#f9b957";
