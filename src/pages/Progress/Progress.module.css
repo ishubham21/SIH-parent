@@ -20,7 +20,7 @@
 
 .heading1 {
   font-weight: 500;
-  font-size: 60px;
+  font-size: 30px;
   color: #ba422b;
   position: relative;
   bottom: 30px;
@@ -29,10 +29,11 @@
 
 .heading2 {
   font-weight: 500;
-  font-size: 40px;
+  font-size: 26px;
   color: #ffffff;
   text-transform: uppercase;
 }
+
 .wrapper {
   display: flex;
   align-items: center;
@@ -42,13 +43,14 @@
 }
 
 .cognitive,
-.psychomotor {
+.psychomotor,
+.assigned {
   width: 30rem;
 }
 .content_wrapper {
   background-color: #ffffff;
   padding: 10px 30px;
-  height: 8rem;
+  height: 10rem;
   box-sizing: border-box;
 }
 
@@ -58,7 +60,7 @@
   direction: rtl;
   height: 100%;
   text-align: left;
-  padding: 0 20px;
+  padding: 0 15px;
   box-sizing: border-box;
 }
 
@@ -160,7 +162,8 @@
   }
 
   .cognitive,
-  .psychomotor {
+  .psychomotor,
+  .assigned {
     width: 9rem;
   }
 

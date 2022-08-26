@@ -8,8 +8,8 @@
   background: linear-gradient(180deg, #ffffff 78.65%, #f9b957 78.66%);
 }
 .txt {
-  padding: 3vh 20vh;
-  width: 600px;
+  padding-left: 20vh;
+  width: 640px;
   font-family: "Poppins";
   font-weight: 500;
   font-size: 20px;
@@ -17,7 +17,7 @@
   color: #000000;
 }
 .heading {
-  height: 7vh;
+  height: 5vh;
   color: #c66d32;
   margin-bottom: 30px;
 }
@@ -30,7 +30,7 @@
   justify-content: center;
 }
 
-.img {
+.img{
   height: 24rem;
 }
 
